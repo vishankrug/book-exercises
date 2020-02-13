@@ -25,10 +25,11 @@ print(response)
 # Extract the content of the response using the `content()` function, saving it
 # in a variable.
 response_text <- content(response, "text")
+print(response_text)
 
 # Convert the content variable from a JSON string into a data frame.
 org_repos <- fromJSON(response_text)
-
+print(org_repos)
 
 # How many (public) repositories does the organization have?
 print(nrow(org_repos))
